@@ -53,7 +53,7 @@ public class TokenBucket {
         int i=0;
         while(true) {
             System.out.println("Attempt " + (i + 1) + ": " + (bucket.tryConsume() ? "Consumed" : "Failed to consume"));
-            Thread.sleep(100); // Sleep for half a second.
+            Thread.sleep(100); // Attempt at every 100 milli-ssecond interval.
             i++;
         }
     }
